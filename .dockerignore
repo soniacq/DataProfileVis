@@ -1,0 +1,6 @@
+*/node_modules
+./Demo_csv.ipynb
+*/build/dataProfileVis.js
+*/data_profile_viewer.egg-info
+*/.ipynb_checkpoints
+*/dist
