@@ -20,14 +20,14 @@ data = DataProfileViewer.get_lifeexpectancy_data()
 DataProfileViewer.plot_profiler(data)
 ~~~~
 
-## Data Profile exploration
+## Data Profile Exploration
 
 ~~~~
 import DataProfileViewer
 import datamart_profiler
 ~~~~
 
-In a jupyter notebook, load the output_file 
+In a jupyter notebook, load the data
 
 ~~~~
 metadata = datamart_profiler.process_dataset('lifeexpectancydata.csv', include_sample=True, plots=True)
