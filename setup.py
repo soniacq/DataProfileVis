@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="data-profile-viewer",
-    version="0.1.1",
+    version="0.2.0",
     author="Sonia Castelo",
     author_email="s.castelo@nyu.edu",
     description="Data Profile Viewer tool. Enables the exploration of data profile in Jupyter Notebooks",

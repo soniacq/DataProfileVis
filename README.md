@@ -17,7 +17,7 @@ In Jupyter Notebook:
 ~~~~
 import DataProfileViewer
 data = DataProfileViewer.get_lifeexpectancy_data()
-DataProfileViewer.plot_profiler(data)
+DataProfileViewer.plot_data_summary(data)
 ~~~~
 
 ## Data Profile Exploration
@@ -36,5 +36,5 @@ metadata = datamart_profiler.process_dataset('lifeexpectancydata.csv', include_s
 and then plot it using:
 
 ~~~~
-DataProfileViewer.plot_profiler(metadata)
+DataProfileViewer.plot_data_summary(metadata)
 ~~~~
