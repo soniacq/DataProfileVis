@@ -26,11 +26,12 @@ function SemanticTypeBadge(props: {
   column: ColumnMetadata;
   onRemove: () => void;
 }) {
+  const cornerButtonSize = 20;
   const label = formatTypeName(props.type);
   const semtypeClass = classMapping[label.toLowerCase()];
   const spanClass = semtypeClass
-    ? `inline-flex badge badge-pill semtype ${semtypeClass}`
-    : 'inline-flex badge badge-pill semtype';
+    ? `inline-flex badge badge-pill semtype ${semtypeClass} m-3`
+    : 'inline-flex badge badge-pill semtype m-3';
   const latlonPair =
     (label.toLowerCase() === 'latitude' ||
       label.toLowerCase() === 'longitude') &&
@@ -44,10 +45,10 @@ function SemanticTypeBadge(props: {
       <button
         type="button"
         title="Remove this annotation"
-        className="btn btn-link badge-button"
+        className="btn btn-link badge-corner-button"
         onClick={() => props.onRemove()}
       >
-        <Icon.XCircle size={11} />
+        <Icon.XCircle size={cornerButtonSize} />
       </button>
     </span>
   );

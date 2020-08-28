@@ -207,3 +207,26 @@ export enum ColumnType {
   GEO_POINT = 'http://schema.org/GeoCoordinates',
   GEO_POLYGON = 'http://schema.org/GeoShape',
 }
+
+export const DATASET_TYPES = [
+  'spatial',
+  'temporal',
+  'numerical',
+  'categorical',
+];
+
+export enum RequestResult {
+  SUCCESS = 'SUCCESS',
+  ERROR = 'ERROR',
+}
+
+export enum RequestStatus {
+  SUCCESS = 'SUCCESS',
+  ERROR = 'ERROR',
+  IN_PROGRESS = 'IN_PROGRESS',
+}
+
+export interface ProfileResult extends Metadata {
+  token: string;
+}
+

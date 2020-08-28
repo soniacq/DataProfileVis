@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="data-profile-viewer",
-    version="0.2.0",
+    version="0.2.2",
     author="Sonia Castelo",
     author_email="s.castelo@nyu.edu",
     description="Data Profile Viewer tool. Enables the exploration of data profile in Jupyter Notebooks",
@@ -26,6 +26,7 @@ setup(
         "scipy",
         "scikit-learn",
         "networkx",
-        "notebook"
+        "notebook",
+        "datamart_profiler==0.7.1"
     ]
 )
