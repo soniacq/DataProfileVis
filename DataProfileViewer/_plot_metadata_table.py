@@ -86,7 +86,7 @@ def getSample(text):
     result = [df.columns.values.tolist()] + df.values.tolist()
     return result
   
-def prepare_data_profiler(metadata, enet_alpha=0.001, enet_l1=0.1):
+def prepare_data_profiler(metadata):
     metadata = copy.deepcopy(metadata)
     
     metadataJSON = {
