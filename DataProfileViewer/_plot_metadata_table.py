@@ -1,11 +1,7 @@
 import pkg_resources
 import string
-import numpy as np
-from dateutil.parser import parse
 import json
-import networkx as nx
 from ._comm_api import setup_comm_api
-from collections import defaultdict
 import copy
 import random
 import datamart_profiler
@@ -40,7 +36,7 @@ def id_generator(size=15):
     """Helper function to generate random div ids. This is useful for embedding
     HTML into ipython notebooks."""
     chars = list(string.ascii_uppercase)
-    return ''.join(np.random.choice(chars, size, replace=True))
+    return ''.join(random.choices(chars, k=size))
 
 
 def make_html(data_dict, id):

@@ -21,11 +21,6 @@ setup(
     ],
     python_requires='>=3.6',
     install_requires=[
-        "python-dateutil",
-        "numpy",
-        "scipy",
-        "scikit-learn",
-        "networkx",
         "notebook",
         "datamart-profiler>=0.8",
         "pandas"
