@@ -40,46 +40,46 @@ def id_generator(size=15):
 
 
 def make_html(data_dict, id):
-	lib_path = pkg_resources.resource_filename(__name__, "build/dataProfileVis.js")
-	bundle = open(lib_path, "r", encoding="utf8").read()
-	html_all = """
-	<html>
-	<head>
-	</head>
-	<body>
-	    <script>
-	    {bundle}
-	    </script>
-	    <div id="{id}">
-	    </div>
-	    <script>
-	        dataProfileVis.renderProfilerViewBundle("#{id}", {data_dict});
-	    </script>
-	</body>
-	</html>
-	""".format(bundle=bundle, id=id, data_dict=json.dumps(data_dict))
-	return html_all
+    lib_path = pkg_resources.resource_filename(__name__, "build/dataProfileVis.js")
+    bundle = open(lib_path, "r", encoding="utf8").read()
+    html_all = """
+    <html>
+    <head>
+    </head>
+    <body>
+        <script>
+        {bundle}
+        </script>
+        <div id="{id}">
+        </div>
+        <script>
+            dataProfileVis.renderProfilerViewBundle("#{id}", {data_dict});
+        </script>
+    </body>
+    </html>
+    """.format(bundle=bundle, id=id, data_dict=json.dumps(data_dict))
+    return html_all
 
 def edit_profiler_make_html(data_dict, id):
-	lib_path = pkg_resources.resource_filename(__name__, "build/dataProfileVis.js")
-	bundle = open(lib_path, "r", encoding="utf8").read()
-	html_all = """
-	<html>
-	<head>
-	</head>
-	<body>
-	    <script>
-	    {bundle}
-	    </script>
-	    <div id="{id}">
-	    </div>
-	    <script>
-	        dataProfileVis.renderEditProfilerViewBundle("#{id}", {data_dict});
-	    </script>
-	</body>
-	</html>
-	""".format(bundle=bundle, id=id, data_dict=json.dumps(data_dict))
-	return html_all
+    lib_path = pkg_resources.resource_filename(__name__, "build/dataProfileVis.js")
+    bundle = open(lib_path, "r", encoding="utf8").read()
+    html_all = """
+    <html>
+    <head>
+    </head>
+    <body>
+        <script>
+        {bundle}
+        </script>
+        <div id="{id}">
+        </div>
+        <script>
+            dataProfileVis.renderEditProfilerViewBundle("#{id}", {data_dict});
+        </script>
+    </body>
+    </html>
+    """.format(bundle=bundle, id=id, data_dict=json.dumps(data_dict))
+    return html_all
 
 def getSample(text):
     df = pandas.read_csv(StringIO(text))
