@@ -9,6 +9,8 @@ from collections import defaultdict
 import copy
 import random
 import datamart_profiler
+import pandas
+from io import StringIO
 
 exportedMetadata = {}
 updatedColumns = {}
@@ -84,12 +86,8 @@ def edit_profiler_make_html(data_dict, id):
 	return html_all
 
 def getSample(text):
-    lines = text.split('\n')
-    result = []
-    for line in lines:
-        if line is not '':
-            row = line.split(',')
-            result.append(row)
+    df = pandas.read_csv(StringIO(text))
+    result = [df.columns.values.tolist()] + df.values.tolist()
     return result
   
 def prepare_data_profiler(metadata, enet_alpha=0.001, enet_l1=0.1):
