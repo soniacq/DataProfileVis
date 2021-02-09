@@ -198,7 +198,7 @@ function TableColumnView(props: {
     <tbody>
       {props.headerGroups[0].headers.map((column, i) => {
         const columnStatistics = (
-          <td style={{ minWidth: 400 }}>
+          <td style={{ minWidth: 400, textAlign: 'left' }}>
             <ul style={{ listStyle: 'none', columnCount: 2, columnGap: 10 }}>
               {props.hit.metadata.columns[i].num_distinct_values && (
                 <li>Unique Values</li>
@@ -219,10 +219,10 @@ function TableColumnView(props: {
         );
         return (
           <tr key={'column' + i} {...column.getHeaderProps()}>
-            <td>
+            <td style={{textAlign: 'left'}}>
               <b>{column.render('Header')} </b>
             </td>
-            <td>
+            <td style={{textAlign: 'left'}}>
               <TypeBadges column={props.hit.metadata.columns[i]} />
             </td>
             <VegaPlot
@@ -261,6 +261,7 @@ function TableCompactDetailView(props: { tableProps: TableProps }) {
                   background: '#eee',
                   zIndex: 1,
                   width:200,
+                  textAlign: 'left',
                 }}
               >
                 {column.render('Header')}
@@ -290,7 +291,7 @@ function TableCompactDetailView(props: { tableProps: TableProps }) {
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map(cell => {
-                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
+                return <td {...cell.getCellProps()} style={{textAlign: 'left'}}>{cell.render('Cell')}</td>;
               })}
             </tr>
           );
