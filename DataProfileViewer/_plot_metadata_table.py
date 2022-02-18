@@ -123,6 +123,13 @@ def plot_data_summary(metadata):
     html_all = make_html(data_dict, id)
     display(HTML(html_all))
 
+def plot_data_summary_streamlit(metadata):
+    from IPython.core.display import display, HTML
+    id = id_generator()
+    data_dict = prepare_data_profiler(metadata)
+    html_all = make_html(data_dict, id)
+    return html_all
+
 def plot_edit_profiler(metadata):
     from IPython.core.display import display, HTML
     id = id_generator()
