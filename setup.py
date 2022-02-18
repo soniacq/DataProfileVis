@@ -27,7 +27,7 @@ setup(
         "scikit-learn",
         "networkx",
         "notebook",
-        "datamart_profiler==0.8.1",
+        "datamart-profiler>=0.8",
         "pandas"
     ]
 )
