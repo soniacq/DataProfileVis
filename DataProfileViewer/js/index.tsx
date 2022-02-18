@@ -6,13 +6,13 @@ import {EditProfilerView} from './EditProfilerView/EditProfilerView';
 import "regenerator-runtime/runtime";
 
 export function renderProfilerViewBundle(divName, data){
-	ReactDOM.render(
-		<ProfilerView data={data}/>
-		, select(divName).node());
+  ReactDOM.render(
+    <ProfilerView data={data}/>
+    , select(divName).node());
 }
 
 export function renderEditProfilerViewBundle(divName, data){
-	ReactDOM.render(
-		<EditProfilerView hit={data}/>
-		, select(divName).node());
+  ReactDOM.render(
+    <EditProfilerView hit={data}/>
+    , select(divName).node());
 }
